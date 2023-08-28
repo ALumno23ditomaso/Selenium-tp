@@ -62,9 +62,9 @@ describe('Test de login', async () => {
 
  
 
-        await username.sendKeys('test@gmail.com');
+        await username.sendKeys('juan@lol.com');
 
-        await password.sendKeys('test', Key.RETURN);
+        await password.sendKeys('pindonga', Key.RETURN);
 
  
 
@@ -134,7 +134,7 @@ describe('Test navegabilidad', async ()=>{
 
  
 
-        await driver.findElement(By.id('cargaDeDatos')).click();
+        await driver.findElement(By.id('register')).click();
 
  
 
@@ -200,17 +200,17 @@ describe('Test navegabilidid', async()=>{
 
         await username.sendKeys('test@gmail.com');
 
-        await password.sendKeys('test', Key.RETURN);
+        await password.sendKeys('pindonga', Key.RETURN);
 
  
 
         await driver.sleep(500);
 
-        await driver.findElement(By.id('cargaDeDatos')).click();
+        await driver.findElement(By.id('register')).click();
 
         const pageTitle = await driver.getTitle();
 
-        if (pageTitle === 'cargaDeDatos') {
+        if (pageTitle === 'register') {
 
             return new Error('cargaron los datos');
 
